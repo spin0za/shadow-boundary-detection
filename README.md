@@ -12,7 +12,7 @@ are trivial.
 To compute the first feature, illumination ratio of sun and sky, we need to define the
 Gaussian weighted average of pixels on both sides of an edge pixel. Here we use an
 oriented 2D Gaussian derivative filter aligned to the direction of boundary according to
-Lalonde et al [1]. Keep its positive entries and set the rest to 0, normalize it and apply it.
+[Lalonde et al](http://repository.cmu.edu/cgi/viewcontent.cgi?article=1783&context=robotics). Keep its positive entries and set the rest to 0, normalize it and apply it.
 To improve efficiency, we avoid convolving the whole image with the filter, but calculate
 only the convolution value at the edge pixel. This value is exactly the Gaussian average
 of one side. Rotate the filter by 180 degrees and repeat we will get the average of the
